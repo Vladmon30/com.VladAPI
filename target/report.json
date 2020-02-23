@@ -1,0 +1,84 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1085500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp(Scenario)"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Student email verification",
+        "description": "",
+        "id": "students-title-verification;student-email-verification",
+        "after": [
+          {
+            "output": [
+              "http://api.cybertektraining.com/student/all"
+            ],
+            "result": {
+              "duration": 1767700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2356328000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user hit students API with \"http://api.cybertektraining.com/student/all\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://api.cybertektraining.com/student/all\"",
+                  "offset": 27
+                }
+              ],
+              "location": "studentsVerify_Title_Email_steps.user_hit_students_API_with(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Students email verify is fail at index: 4\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertFalse(Assert.java:64)\r\n\tat steps.studentsVerify_Title_Email_steps.user_verify_each_student_email_address_to_be_valid(studentsVerify_Title_Email_steps.java:45)\r\n\tat ✽.user verify each student email address to be valid(src/test/resources/apiFeatures/studentsVerify_Title_Email.feature:14)\r\n",
+              "duration": 4789400,
+              "status": "failed"
+            },
+            "line": 14,
+            "name": "user verify each student email address to be valid",
+            "match": {
+              "location": "studentsVerify_Title_Email_steps.user_verify_each_student_email_address_to_be_valid()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@studentEmail"
+          }
+        ]
+      }
+    ],
+    "name": "Students title verification",
+    "description": "",
+    "id": "students-title-verification",
+    "keyword": "Feature",
+    "uri": "src/test/resources/apiFeatures/studentsVerify_Title_Email.feature",
+    "tags": []
+  }
+]
